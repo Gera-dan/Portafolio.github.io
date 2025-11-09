@@ -1,0 +1,486 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Portafolio Profesional - Gerardo Daniel Olivares Álvarez</title>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+  <!-- Iconos -->
+  <script src="https://kit.fontawesome.com/3a2e9e55a4.js" crossorigin="anonymous"></script>
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: "Poppins", sans-serif;
+      background-color: #0b0c28;
+      color: #fff;
+      overflow-x: hidden;
+    }
+
+
+    /* ===== HEADER ===== */
+    header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      background: rgba(10, 15, 45, 0.8);
+      backdrop-filter: blur(10px);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 5%;
+      z-index: 1000;
+    }
+
+    header h1 {
+      font-size: 1.3rem;
+      letter-spacing: 2px;
+      color: #fff;
+    }
+
+    nav a {
+      color: #fff;
+      text-decoration: none;
+      margin-left: 2rem;
+      font-weight: 400;
+      transition: color 0.3s ease;
+    }
+
+    nav a:hover {
+      color: #00adb5;
+    }
+
+/* ===== SECCIÓN SOBRE MÍ ===== */
+.sobre-mi {
+  background: url('img/fondo.jpg') no-repeat center center/cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 80px 0;
+  position: relative;
+  color: #fff;
+}
+
+.sobre-mi::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(10, 20, 40, 0.75);
+  backdrop-filter: blur(6px);
+}
+
+.sobre-mi-contenedor {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 50px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 20px;
+  padding: 40px 60px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+  max-width: 1100px;
+  width: 90%;
+  z-index: 1;
+}
+
+.sobre-mi .foto img {
+  width: 280px;
+  height: auto;
+  border-radius: 12px;
+  object-fit: cover;
+  border: 3px solid rgba(255, 255, 255, 0.4);
+}
+
+.info-personal h1 {
+  font-size: 1.9rem;
+  font-weight: 600;
+  margin-bottom: 8px;
+  color: #fff;
+}
+
+.info-personal h3 {
+  font-size: 1.1rem;
+  font-weight: 400;
+  margin-bottom: 20px;
+  color: #b8c6ff;
+}
+
+.info-personal p {
+  margin-bottom: 10px;
+  line-height: 1.6;
+}
+
+.info-personal strong {
+  color: #e0e6ff;
+}
+
+.redes {
+  margin-top: 20px;
+}
+
+.redes a {
+  color: #b8c6ff;
+  font-size: 1.6rem;
+  margin-right: 18px;
+  transition: color 0.3s ease;
+}
+
+.redes a:hover {
+  color: #4dabff;
+}
+
+
+
+    /* ===== SECCIONES ===== */
+    section {
+      padding: 120px 10% 80px 10%;
+    }
+
+    h2.section-title {
+      text-align: center;
+      font-size: 1.8rem;
+      color: #fff;
+      letter-spacing: 3px;
+      margin-bottom: 3rem;
+      text-transform: uppercase;
+    }
+
+    /* ======= FORMACIÓN ======= */
+    .timeline {
+      position: relative;
+      max-width: 1000px;
+      margin: auto;
+    }
+
+    .timeline::before {
+      content: "";
+      position: absolute;
+      left: 50%;
+      top: 0;
+      transform: translateX(-50%);
+      width: 2px;
+      height: 100%;
+      background-color: rgba(255,255,255,0.2);
+    }
+
+    .timeline-item {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 60px;
+      position: relative;
+    }
+
+    .timeline-item:nth-child(even) {
+      flex-direction: row-reverse;
+    }
+
+    .timeline-content {
+      background: rgba(255, 255, 255, 0.05);
+      backdrop-filter: blur(10px);
+      padding: 1.5rem 2rem;
+      border-radius: 15px;
+      width: 45%;
+    }
+
+    .timeline-content h3 {
+      color: #00adb5;
+      font-size: 1rem;
+      letter-spacing: 1px;
+      margin-bottom: 0.5rem;
+      text-transform: uppercase;
+    }
+
+    .timeline-content p {
+      font-size: 0.95rem;
+      line-height: 1.6;
+    }
+
+    .timeline-dot {
+      position: absolute;
+      top: 15px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 18px;
+      height: 18px;
+      background-color: #00adb5;
+      border-radius: 50%;
+    }
+
+    /* ======= CURSOS Y CERTIFICACIONES ======= */
+    .timeline-content a {
+      display: inline-block;
+      margin-top: 0.8rem;
+      color: #00adb5;
+      text-decoration: none;
+      font-weight: 500;
+    }
+
+    .timeline-content a:hover {
+      color: #fff;
+    }
+
+    /* ======= LOGROS ======= */
+    .logros-container {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 2rem;
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    .logro-card {
+      background: rgba(255, 255, 255, 0.05);
+      backdrop-filter: blur(10px);
+      padding: 2rem;
+      border-radius: 20px;
+      width: 320px;
+      transition: 0.3s ease;
+      text-align: center;
+    }
+
+    .logro-card:hover {
+      transform: translateY(-5px);
+      background: rgba(255, 255, 255, 0.1);
+    }
+
+    .logro-card h3 {
+      color: #00adb5;
+      text-transform: uppercase;
+      margin-bottom: 1rem;
+      font-size: 1.1rem;
+    }
+
+    .logro-card p {
+      font-size: 0.95rem;
+      margin-bottom: 1rem;
+    }
+
+    .logro-card a {
+      color: #ff4d4d;
+      text-decoration: none;
+      font-weight: 600;
+    }
+
+    .logro-card a:hover {
+      text-decoration: underline;
+    }
+
+    /* ======= APTITUDES ======= */
+    .aptitudes-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 1.5rem;
+      margin-top: 2rem;
+      max-width: 1000px;
+      margin-inline: auto;
+    }
+
+    .aptitud {
+      background: rgba(255, 255, 255, 0.08);
+      backdrop-filter: blur(6px);
+      text-align: center;
+      padding: 1.5rem;
+      border-radius: 12px;
+      font-weight: 500;
+      letter-spacing: 0.5px;
+      transition: 0.3s;
+    }
+
+    .aptitud:hover {
+      background: rgba(255, 255, 255, 0.15);
+      transform: scale(1.05);
+    }
+
+    footer {
+      text-align: center;
+      padding: 2rem;
+      color: #ccc;
+      font-size: 0.9rem;
+    }
+
+    /* Animación Scroll */
+    [data-animate] {
+      opacity: 0;
+      transform: translateY(50px);
+      transition: all 1s ease;
+    }
+
+    [data-animate].visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <h1>PORTAFOLIO</h1>
+    <nav>
+      <a href="#formacion">Formación</a>
+      <a href="#cursos">Certificaciones</a>
+      <a href="#logros">Logros</a>
+      <a href="#aptitudes">Aptitudes</a>
+    </nav>
+  </header>
+
+  <!-- ===== SECCIÓN SOBRE MÍ ===== -->
+<section id="sobre-mi" class="sobre-mi">
+  <div class="sobre-mi-contenedor">
+    <div class="foto">
+      <img src="img/perfil.jpg" alt="Foto de perfil">
+    </div>
+    <div class="info-personal">
+      <h1>Gerardo Daniel Olivares Álvarez</h1>
+      <h3>Ing. en Tecnologías de la Información y Comunicaciones</h3>
+
+      <p><strong>Teléfono:</strong><br> 4191056504</p>
+      <p><strong>Email:</strong><br> ogerardo143@gamil.com</p>
+      <p><strong>Fecha de nacimiento:</strong><br> 26 de Diciembre del 2004</p>
+
+      <div class="redes">
+        <a href="https://www.linkedin.com/in/tuusuario" target="_blank"><i class="fab fa-linkedin"></i></a>
+        <a href="https://github.com/tuusuario" target="_blank"><i class="fab fa-github"></i></a>
+        <a href="mailto:ecastillocruz@icloud.com"><i class="fas fa-envelope"></i></a>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+  <!-- ===== FORMACIÓN ===== -->
+  <section id="formacion">
+    <h2 class="section-title">Formación</h2>
+    <div class="timeline">
+
+      <div class="timeline-item" data-animate>
+        <div class="timeline-dot"></div>
+        <div class="timeline-content">
+          <h3>2019 - 2023 | UNIVERSIDAD</h3>
+          <p><strong>Ing. en Tecnologías de la Información y Comunicaciones (TICs)</strong></p>
+          <p>Instituto Tecnológico Superior del Occidente del Estado de Hidalgo (ITSOEH)</p>
+          <p>Mixquiahuala de Juárez, Hgo.</p>
+        </div>
+      </div>
+
+      <div class="timeline-item" data-animate>
+        <div class="timeline-dot"></div>
+        <div class="timeline-content">
+          <h3>2016 - 2019 | BACHILLERATO</h3>
+          <p><strong>Técnico en Programación</strong></p>
+          <p>Centro de Estudios Tecnológicos Industrial y de Servicio No. 91 “Ignacio Allende” (CETis 91)</p>
+          <p>Tula de Allende, Hgo.</p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+ <!-- ===== CURSOS Y CERTIFICACIONES ===== -->
+<section id="cursos">
+  <h2 class="section-title">Cursos y Certificaciones</h2>
+
+  <div class="logros-container">
+    <div class="logro-card" data-animate>
+      <h3>AWS Cloud Practitioner</h3>
+      <p>Certificación obtenida en 2025 que valida conocimientos fundamentales sobre servicios en la nube de Amazon Web Services.</p>
+      <a href="certificados/cisco.pdf" target="_blank">
+        <i class="fas fa-certificate"></i> Verificar Insignia
+      </a>
+    </div>
+
+    <div class="logro-card" data-animate>
+      <h3>Google IT Support</h3>
+      <p>Certificación emitida por Google que acredita habilidades técnicas en soporte de TI y administración de sistemas.</p>
+      <a href="https://github.com/MoritoMikasa/portafolio/raw/main/certificados/google_it.pdf" target="_blank">
+        <i class="fas fa-certificate"></i> Ver Certificado
+      </a>
+    </div>
+
+    <div class="logro-card" data-animate>
+      <h3>Cisco Networking Essentials</h3>
+      <p>Certificación en redes otorgada por Cisco Networking Academy.</p>
+      <a href="https://github.com/MoritoMikasa/portafolio/raw/main/certificados/cisco.pdf" target="_blank">
+        <i class="fas fa-certificate"></i> Verificar Insignia
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ===== LOGROS ===== -->
+<section id="logros">
+  <h2 class="section-title">Logros</h2>
+
+  <div class="logros-container">
+    <div class="logro-card" data-animate>
+      <h3>Reconocimiento Académico</h3>
+      <p>Primer lugar en innovación tecnológica durante el congreso TIC 2024.</p>
+      <a href="https://github.com/MoritoMikasa/portafolio/raw/main/logros/innovacion2024.pdf" target="_blank">
+        <i class="fas fa-award"></i> Ver Documento
+      </a>
+    </div>
+
+    <div class="logro-card" data-animate>
+      <h3>Proyecto de Investigación</h3>
+      <p>Publicación en la revista “Avances en Ingeniería” sobre optimización de redes.</p>
+      <a href="https://github.com/MoritoMikasa/portafolio/raw/main/logros/publicacion.pdf" target="_blank">
+        <i class="fas fa-file-pdf"></i> Ver Publicación
+      </a>
+    </div>
+
+    <div class="logro-card" data-animate>
+      <h3>Voluntariado Tecnológico</h3>
+      <p>Participación en programas comunitarios de alfabetización digital.</p>
+      <a href="https://github.com/MoritoMikasa/portafolio/raw/main/logros/voluntariado.pdf" target="_blank">
+        <i class="fas fa-handshake"></i> Ver Constancia
+      </a>
+    </div>
+  </div>
+</section>
+
+
+  <!-- ===== APTITUDES ===== -->
+  <section id="aptitudes">
+    <h2 class="section-title">Aptitudes</h2>
+    <div class="aptitudes-grid" data-animate>
+      <div class="aptitud">Redes de computadoras</div>
+      <div class="aptitud">Bases de datos en MySQL</div>
+      <div class="aptitud">Cómputo en la nube</div>
+      <div class="aptitud">Internet de las Cosas</div>
+      <div class="aptitud">Hacking ético</div>
+      <div class="aptitud">Ciberseguridad</div>
+      <div class="aptitud">Telecomunicaciones</div>
+      <div class="aptitud">Español - Lengua materna</div>
+    </div>
+  </section>
+
+  <footer>
+    © 2025 Tu Nombre | Portafolio Profesional
+  </footer>
+
+  <script>
+    // Animación de aparición al hacer scroll
+    const elements = document.querySelectorAll('[data-animate]');
+    const reveal = () => {
+      const trigger = window.innerHeight * 0.8;
+      elements.forEach(el => {
+        const top = el.getBoundingClientRect().top;
+        if (top < trigger) el.classList.add('visible');
+      });
+    };
+    window.addEventListener('scroll', reveal);
+    reveal();
+  </script>
+
+</body>
+</html>
